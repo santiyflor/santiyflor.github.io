@@ -20,6 +20,16 @@ body {
     align-items: center; /* Centra horizontalmente */
 }
 
+.imagen-novios {
+    display: block;
+    margin: 40px auto 20px; /* Centra la imagen y agrega espacio debajo */
+    width: 90%;
+    max-width: 500px; /* Ajusta el tamaño máximo de la imagen */
+    border-radius: 50%; /* Hace la imagen redonda */
+    border: 4px solid #7f987d; /* Añade un borde que combine con el tema */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+}
+
 /* Imagen centrada */
 .imagen-centrada {
     max-width: 90%; /* Incrementamos el ancho máximo */
