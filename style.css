@@ -1,0 +1,161 @@
+/* Estilo del cuerpo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-image: url('portada.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fondo fijo */
+    background-position: center;
+}
+
+/* Contenedor de la imagen y flecha */
+.fondo-fijo {
+    position: relative; /* Relativo para permitir posicionar elementos dentro */
+    height: 100vh; /* Ocupa toda la altura del viewport */
+    display: flex; /* Utilizamos Flexbox */
+    flex-direction: column; /* Coloca la imagen y la flecha en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+}
+
+/* Imagen centrada */
+.imagen-centrada {
+    max-width: 90%; /* Incrementamos el ancho máximo */
+    max-height: 80%; /* Incrementamos el alto máximo */
+    object-fit: contain;
+}
+
+/* Flecha debajo de la imagen */
+.flecha-scroll {
+    font-size: 40px;
+    width: 50px; /* Incrementamos el tamaño de la flecha */
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 30px; /* Más espacio entre la imagen y la flecha */
+    animation: mover 1.5s infinite; /* Animación */
+}
+
+/* Animación de la flecha */
+@keyframes mover {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(15px); /* Movimiento hacia abajo más pronunciado */
+    }
+}
+
+/* Contenido desplazable */
+.contenido {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 1vh; /* Comienza después de la sección inicial */
+}
+
+.contenido-dos-columnas {
+    display: flex;
+    justify-content: space-between; /* Espacio entre las columnas */
+    gap: 20px; /* Espacio entre las columnas */
+    flex-wrap: wrap; /* Asegura que las columnas se ajusten en pantallas pequeñas */
+}
+
+/* Columnas con tamaño igual */
+.columna-izquierda, .columna-derecha {
+    flex: 1; /* Ambas columnas ocupan el mismo espacio */
+    max-width: 48%; /* Asegura que las columnas no se estiren demasiado */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+/* Columna derecha con diseño específico */
+.columna-derecha {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contenido-dos-columnas {
+        flex-direction: column; /* Cambia a diseño vertical */
+        align-items: center; /* Centra las columnas */
+    }
+
+    .columna-izquierda, .columna-derecha {
+        max-width: 100%; /* Ocupan todo el ancho disponible */
+        margin-bottom: 20px; /* Espacio entre las columnas */
+    }
+}
+
+.icono-iglesia {
+    font-size: 80px; /* Hacer el icono mucho más grande */
+    color: #7f987d; /* Un color verde, puedes cambiarlo */
+    margin-bottom: 20px; /* Espacio debajo del icono */
+}
+
+.fila-color-diferente {
+    background-color: #7f987d; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 40px 20px; /* Espaciado interno */
+    margin: 40px 0 0; /* Espacio arriba */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+.fila-color-diferente p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.btn-maps {
+    display: inline-block;
+    background-color: #7f987d; /* Color de fondo (azul de Google) */
+    color: white;
+    padding: 15px 30px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-maps:hover {
+    background-color: transparent; /* Color cuando se pasa el ratón */
+    color: #7f987d;
+    border-color: #7f987d;
+}
+
+.confirmacion {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.confirmacion p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.fila-color-diferente p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Estilo para el agradecimiento final */
+.agradecimiento {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.agradecimiento p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.agradecimiento strong {
+    font-size: 20px;
+}
