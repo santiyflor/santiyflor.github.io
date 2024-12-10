@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
-    background-image: url('https://1drv.ms/i/c/f32dee1dc5509b6d/IQQHtN5-kzCQT7Oy8mh6M1arAXV0tlj4tiHmwizotp5nCuw?width=1024'); /* Imagen de fondo */
+    background-image: url('portada.jpg'); /* Imagen de fondo */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; /* Fondo fijo */
