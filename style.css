@@ -67,21 +67,23 @@ body {
     margin-top: 1vh; /* Comienza después de la sección inicial */
 }
 
+/* Contenedor de dos columnas */
 .contenido-dos-columnas {
     display: flex;
-    justify-content: space-between; /* Espacio entre las columnas */
+    justify-content: space-between; /* Espacio entre columnas */
     gap: 20px; /* Espacio entre las columnas */
-    flex-wrap: wrap; /* Asegura que las columnas se ajusten en pantallas pequeñas */
+    flex-wrap: wrap; /* Permite que las columnas se ajusten en pantallas pequeñas */
 }
 
 /* Columnas con tamaño igual */
 .columna-izquierda, .columna-derecha {
     flex: 1; /* Ambas columnas ocupan el mismo espacio */
-    max-width: 48%; /* Asegura que las columnas no se estiren demasiado */
-    box-sizing: border-box; /* Incluye padding en el ancho total */
+    max-width: 48%; /* Evita que las columnas se estiren demasiado */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    text-align: center; /* Centra el contenido dentro de cada columna */
 }
 
-/* Columna derecha con diseño específico */
+/* Diseño específico para la columna derecha */
 .columna-derecha {
     background-color: #f4f4f4;
     padding: 20px;
@@ -96,10 +98,11 @@ body {
     }
 
     .columna-izquierda, .columna-derecha {
-        max-width: 100%; /* Ocupan todo el ancho disponible */
+        max-width: 100%; /* Cada columna ocupa el ancho completo */
         margin-bottom: 20px; /* Espacio entre las columnas */
     }
 }
+
 
 .icono-iglesia {
     font-size: 80px; /* Hacer el icono mucho más grande */
