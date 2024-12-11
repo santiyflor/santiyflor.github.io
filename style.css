@@ -169,3 +169,43 @@ body {
 .agradecimiento strong {
     font-size: 20px;
 }
+
+.swiper-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    position: relative; /* Posiciona los elementos internos en relación al contenedor */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Flechas de navegación */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white; /* Cambia el color de las flechas */
+    position: absolute; /* Asegura que estén dentro del contenedor */
+    top: 50%; /* Centra las flechas verticalmente */
+    transform: translateY(-50%);
+    z-index: 10; /* Asegura que las flechas estén sobre la imagen */
+}
+
+.swiper-button-next {
+    right: 10px; /* Ajusta la distancia del borde derecho */
+}
+
+.swiper-button-prev {
+    left: 10px; /* Ajusta la distancia del borde izquierdo */
+}
+
+/* Paginación */
+.swiper-pagination {
+    position: absolute; /* Posiciona los puntos sobre el contenedor */
+    bottom: 10px; /* Ubica la paginación en la parte inferior del carrusel */
+    width: 100%;
+    text-align: center; /* Centra los puntos */
+    z-index: 10; /* Asegura que los puntos estén sobre la imagen */
+}
