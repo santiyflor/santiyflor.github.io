@@ -177,6 +177,7 @@ body {
 }
 
 .swiper-container {
+    transform: none;
     width: 100%;
     max-width: 1600px; /* Ancho máximo del carrusel */
     margin: 40px auto;
@@ -206,32 +207,32 @@ body {
     object-fit: cover; /* Recorta la imagen para ajustarse al tamaño del contenedor */
 }
 
-/* Flechas de navegación */
 .swiper-button-next,
 .swiper-button-prev {
-    color: white; /* Color de las flechas */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 50px; /* Ajusta el ancho del botón */
-    height: 50px; /* Ajusta la altura del botón */
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    border-radius: 50%; /* Hace que el fondo sea circular */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px; /* Asegura que haya espacio suficiente dentro del botón */
-    box-sizing: border-box; /* Incluye el padding dentro del tamaño del botón */
+    color: white !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10 !important;
+    width: 35px !important; /* Reducir el tamaño en el eje X */
+    height: 55px !important; /* Aumentar el tamaño en el eje Y */
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    border-radius: 25px !important; /* Fondo ovalado con el eje Y más grande */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+    box-sizing: content-box !important;
 }
 
-.swiper-button-next {
-    right: 10px;
+.swiper-button-next i, 
+.swiper-button-prev i {
+    font-size: 20px !important; /* Reducir el tamaño de la flecha */
+    margin: 0 !important;
 }
 
-.swiper-button-prev {
-    left: 10px;
-}
+
+
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -249,7 +250,7 @@ body {
     text-align: center;
     width: 100%;
     z-index: 10;
-    color: white;
+    color: white !important;
 }
 
 
