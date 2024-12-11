@@ -1,5 +1,6 @@
 /* Estilo del cuerpo */
 body {
+    padding: 0;
     margin: 0;
     font-family: Arial, sans-serif;
     color: #333;
@@ -8,6 +9,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed; /* Fondo fijo */
     background-position: center;
+    overflow-x: hidden;
 }
 
 /* Contenedor de la imagen y flecha */
@@ -176,40 +178,78 @@ body {
 
 .swiper-container {
     width: 100%;
-    max-width: 500px;
+    max-width: 1600px; /* Ancho máximo del carrusel */
     margin: 40px auto;
-    position: relative; /* Posiciona los elementos internos en relación al contenedor */
+    position: relative;
+    padding-bottom: 80px; /* Espacio adicional dentro del contenedor */
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.6s ease; /* Asegura una transición suave */
+}
+
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Oculta las partes que exceden el tamaño definido */
+    height: 1000px; /* Aumenta la altura de las imágenes */
+    background: #f4f4f4; /* Fondo de reserva */
+    border-radius: 10px; /* Opcional: bordes redondeados para mejor estética */
 }
 
 .swiper-slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Asegura que la imagen ocupe toda la altura del contenedor */
+    object-fit: cover; /* Recorta la imagen para ajustarse al tamaño del contenedor */
 }
 
 /* Flechas de navegación */
 .swiper-button-next,
 .swiper-button-prev {
-    color: white; /* Cambia el color de las flechas */
-    position: absolute; /* Asegura que estén dentro del contenedor */
-    top: 50%; /* Centra las flechas verticalmente */
+    color: white; /* Color de las flechas */
+    position: absolute;
+    top: 50%;
     transform: translateY(-50%);
-    z-index: 10; /* Asegura que las flechas estén sobre la imagen */
+    z-index: 10;
+    width: 50px; /* Ajusta el ancho del botón */
+    height: 50px; /* Ajusta la altura del botón */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border-radius: 50%; /* Hace que el fondo sea circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px; /* Asegura que haya espacio suficiente dentro del botón */
+    box-sizing: border-box; /* Incluye el padding dentro del tamaño del botón */
 }
 
 .swiper-button-next {
-    right: 10px; /* Ajusta la distancia del borde derecho */
+    right: 10px;
 }
 
 .swiper-button-prev {
-    left: 10px; /* Ajusta la distancia del borde izquierdo */
+    left: 10px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 40px; /* Reduce el tamaño en pantallas pequeñas */
+        height: 40px;
+    }
 }
 
 /* Paginación */
 .swiper-pagination {
-    position: absolute; /* Posiciona los puntos sobre el contenedor */
-    bottom: 10px; /* Ubica la paginación en la parte inferior del carrusel */
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
     width: 100%;
-    text-align: center; /* Centra los puntos */
-    z-index: 10; /* Asegura que los puntos estén sobre la imagen */
+    z-index: 10;
+    color: white;
 }
+
+

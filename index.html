@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="fondo-fijo">
-        <img src="bienvenida-v3.png" alt="" class="imagen-centrada">
+        <img src="bienvenida-v4.png" alt="" class="imagen-centrada">
         <img src="novios.jpg" alt="" class="imagen-novios">
         <div class="flecha-scroll"><i class="fas fa-chevron-down"></i></div>
     </div>
@@ -46,31 +46,6 @@
         </div>
     </main>
 
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="novios.jpg" alt="Foto 1">
-            </div>
-            <div class="swiper-slide">
-                <img src="novios.jpg" alt="Foto 2">
-            </div>
-            <div class="swiper-slide">
-                <img src="novios.jpg" alt="Foto 3">
-            </div>
-            <div class="swiper-slide">
-                <img src="novios.jpg" alt="Foto 3">
-            </div>
-            <div class="swiper-slide">
-                <img src="novios.jpg" alt="Foto 3">
-            </div>
-        </div>
-        <!-- Botones de navegación -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <!-- Paginación -->
-        <div class="swiper-pagination"></div>
-    </div>
-    
     <!-- Nueva fila con texto de agradecimiento y datos bancarios -->
     <div class="fila-color-diferente">
         <p>Que vengas ese día es nuestro mejor regalo! Pero si querés regalarnos algo, nos podés ayudar para nuestra luna de miel:</p>
@@ -83,21 +58,60 @@
         <p><strong>Santi y Flor</strong></p>
     </div>
 
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="carousel1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="carousel2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="carousel3.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="carousel4.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="carousel5.jpg" alt="">
+            </div>
+        </div>
+        <!-- Botones de navegación -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Paginación -->
+        <div class="swiper-pagination"></div>
+    </div>
+
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper-container', {
-            loop: true, // Habilita el bucle infinito
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+        loop: true,
+        slidesPerView: 3, // Número de imágenes visibles en pantallas grandes
+        spaceBetween: 10, // Espacio entre imágenes
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        speed: 600, // Velocidad de la transición
+        breakpoints: {
+            768: { // A partir de 768px de ancho
+                slidesPerView: 3, // Muestra 3 imágenes
             },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
+            480: { // Entre 480px y 768px de ancho
+                slidesPerView: 2, // Muestra 2 imágenes
             },
-            slidesPerView: 1, // Muestra una diapositiva a la vez
-            spaceBetween: 20, // Espacio entre diapositivas
-        });
+            0: { // Por debajo de 480px
+                slidesPerView: 1, // Muestra solo 1 imagen
+                speed: 400, // Reduce la velocidad de la transición en pantallas pequeñas
+                spaceBetween: 5, // Espacio más pequeño entre imágenes
+            },
+        },
+    });
     </script>
 </body>
 
