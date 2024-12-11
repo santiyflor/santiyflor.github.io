@@ -32,8 +32,9 @@ body {
 
 /* Imagen centrada */
 .imagen-centrada {
+    width: 500px;
     max-width: 90%; /* Incrementamos el ancho máximo */
-    max-height: 80%; /* Incrementamos el alto máximo */
+    max-height: 90%; /* Incrementamos el alto máximo */
     object-fit: contain;
 }
 
